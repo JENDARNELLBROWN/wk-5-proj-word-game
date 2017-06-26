@@ -16,7 +16,7 @@ app.use(expressValidator());
 app.use(express.static('public'));
 
 app.use(session({
-  secret: 'tROi$ e+ D3uX Et 1',
+  secret: 'hoHo7 e+13nu',
   resave: false,
   saveUninitialized: true
 }));
