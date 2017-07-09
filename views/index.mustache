@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Word Game</title>
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <h2>Mystery Word</h2>
-  <body>
-    <div class="container">
-      <form action="/" method="post">
-        <div class="errors">
-          {{#errors}}
-          <p>{{.}}</p>
-          {{/errors}}
-        </div>
-        <p> You have {{numGuesses}} guesses left</p>
-        <p>{{mysteryWord}}</P>
 
-        <input type="text" name="guess" value="" placeholder="guess">
-        <button type="submit">Make a Guess</button>
-        <p>Letters guessed: {{lettersGuessed}}</p>
-      </form>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Word Game</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+  <h1>Mystery Word</h1>
+  <div class="container">
+    <form action="/" method="post">
+      <div class="errors">
+        {{#errors}}
+        <p>{{.}}</p>
+        {{/errors}}
+      </div>
+      <p> You have {{numGuesses}} guesses left</p>
+      <p>{{mysteryWord}}</P>
+      <input type="text" name="guess" value="" placeholder="guess" autofocus >
+      <button type="submit">Submit</button>
+      <p>Letters guessed: {{lettersGuessed}}</p>
+    </form>
+  </div>
+</body>
+
 </html>

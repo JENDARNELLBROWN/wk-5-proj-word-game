@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Word Game</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  
+  <body>
+    <h1>Mystery Word</h1>
+    <div class="container">
+      <form action="/newGame" method="post">
+        <div class="errors">
+          {{#errors}}
+          <p>{{.}}</p>
+          {{/errors}}
+        </div>
+        <p> You have {{numGuesses}} guesses left</p>
+        <p>{{mysteryWord}}</P>
+        <button type="submit">New Game</button>
+        <p>Letters guessed: {{lettersGuessed}}</p>
+      </form>
+    </div>
+  </body>
+</html>
